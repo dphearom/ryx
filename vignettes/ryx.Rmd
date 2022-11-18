@@ -1,0 +1,56 @@
+---
+title: "ryx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ryx}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ryx)
+```
+
+# Introduction
+
+This package contain the following functions ryx, print, plot, and summary. The ryx function will create a table of correlation given a y variable and a vector x of variables in the data frame. Since the return value is of class "ryx", the print, plot, and summary functions included will work appropriately for the returned value.
+
+# Function RYX
+
+Create a correlation table with this function of class "ryx"
+
+```{r eval=FALSE}
+Library(MASS)
+x <- ryx(Boston, y = "medv", x = c("age","dis","lstat"))
+```
+
+# Function Print
+
+This function will print the correlation table without rownames
+
+```{r eval=FALSE}
+print(x) #x is of class "ryx"
+```
+
+# Function Summary
+
+This function will show a customized summary of the data. Click on the summary details for more in-depth info
+
+```{r eval=FALSE}
+summary(x) #x is of class "ryx"
+```
+
+# Function Plot
+
+This function will print a ggplot of variables v. absolute values of correlation
+
+```{r eval=FALSE}
+plot(x) #x is of class "ryx"
+```

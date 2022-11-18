@@ -1,0 +1,18 @@
+Package: ryx
+Title: Print Table of Correlation between Dependent and Independent Variables 
+Version: 0.0.0.9000
+Authors@R: 
+    person("Phearom", "Duong", , "rduong@wesleyan.edu", role = c("aut", "cre"))
+Description: Given a dependent variable y and a vector of one or more independent variables,
+  This function would then compute a correlation table with columns of variable names, 
+  r for correlation value, p for p values, and sigif for stars falgging the p values. In this case,
+  *** represents p < 0.001, ** represents p < 0.01, and * represents p < 0.05. When the independent variables are not 
+  provided, the correlation tables are created for all of the variables in the dataset.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
